@@ -254,13 +254,11 @@
     <script>
         var input = document.getElementById("todayDate")
         let current_datetime = new Date()
-        let tomorrow = new Date()
-        tomorrow.setDate(current_datetime.getDate() + 1)
         let monthString = current_datetime.toLocaleDateString('default', { month: 'long' })
-        let dayString = tomorrow.getDate()
+        let dayString = current_datetime.getDate()
         let yearString = current_datetime.getFullYear()
 
-        input.innerText = monthString + " " + dayString + "," + yearString
+        input.innerText = monthString + " " + dayString + ", " + yearString
     </script>
 
 </body>
